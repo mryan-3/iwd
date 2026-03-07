@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import html2canvas from 'html2canvas'
 
 export function DownloadButton() {
     const [downloading, setDownloading] = useState(false)
@@ -11,6 +10,7 @@ export function DownloadButton() {
         if (!el) return
         setDownloading(true)
         try {
+            const html2canvas = (await import('html2canvas')).default
             const canvas = await html2canvas(el, {
                 backgroundColor: '#FDFDF9',
                 scale: 2,

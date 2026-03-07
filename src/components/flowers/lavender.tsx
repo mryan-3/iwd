@@ -23,10 +23,12 @@ export function Lavender({ size = 40, className, ...props }: FlowerProps) {
                         fill={i < 2 ? "#9c27b0" : i < 4 ? "#ab47bc" : "#ce93d8"}
                         stroke="#7b1fa2" strokeWidth="0.8"
                         transform={`rotate(${i % 2 === 0 ? -20 : 20} ${i % 2 === 0 ? 24 : 30} ${y})`} />
-                    {i % 2 === 0 && <ellipse cx={30 + 6} cy={y} rx="4" ry="6"
-                        fill={i < 2 ? "#ab47bc" : "#ce93d8"}
-                        stroke="#7b1fa2" strokeWidth="0.8"
-                        transform={`rotate(20 36 ${y})`} />}
+                    {i % 2 === 0 ? (
+                        <ellipse cx={30 + 6} cy={y} rx="4" ry="6"
+                            fill={i < 2 ? "#ab47bc" : "#ce93d8"}
+                            stroke="#7b1fa2" strokeWidth="0.8"
+                            transform={`rotate(20 36 ${y})`} />
+                    ) : null}
                 </g>
             ))}
         </svg>

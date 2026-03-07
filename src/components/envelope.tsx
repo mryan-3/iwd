@@ -25,7 +25,7 @@ export function Envelope({ phase, onOpen, flowers = ['rose', 'daisy'] }: Envelop
         >
             {/* Blooming sequence */}
             <AnimatePresence>
-                {phase !== 'sealed' && displayFlowers.map((id, i) => {
+                {phase !== 'sealed' ? displayFlowers.map((id, i) => {
                     const Flower = FLOWER_COMPONENTS[id]
                     if (!Flower) return null
                     const pos = BLOOM_POSITIONS[i % BLOOM_POSITIONS.length]
@@ -54,7 +54,7 @@ export function Envelope({ phase, onOpen, flowers = ['rose', 'daisy'] }: Envelop
                             <Flower size={56} className="drop-shadow-2xl" />
                         </motion.div>
                     )
-                })}
+                }) : null}
             </AnimatePresence>
 
             <div className="absolute inset-0 bg-[#3f2150] rounded-[2px_2px_4px_4px] border border-[#2b1638] shadow-[0_8px_32px_rgba(51,26,65,0.25)] z-10 transition-transform duration-700"
@@ -74,21 +74,21 @@ export function Envelope({ phase, onOpen, flowers = ['rose', 'daisy'] }: Envelop
                 />
 
                 {/* Wax seal */}
-                {phase === 'sealed' && (
+                {phase === 'sealed' ? (
                     <motion.div
                         className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-[40%] z-20 w-[42px] h-[42px] rounded-full bg-green-300 border border-green-400 flex items-center justify-center shadow-[0_2px_12px_rgba(51,26,65,0.4)]"
                         whileHover={{ scale: 1.05 }}
                     >
                         <Heart size={20} color="#FDFDF9" />
                     </motion.div>
-                )}
+                ) : null}
             </div>
 
-            {phase === 'sealed' && (
+            {phase === 'sealed' ? (
                 <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 font-ui uppercase tracking-widest text-[0.65rem] font-medium text-purple-400 opacity-80 whitespace-nowrap">
                     tap to open
                 </div>
-            )}
+            ) : null}
         </div>
     )
 }

@@ -32,7 +32,7 @@ export function LinkResult({ url, onReset }: LinkResultProps) {
                 <button onClick={handleCopy}
                     className={clsx(
                         "bg-purple-500 hover:bg-purple-600 text-white border-none rounded-xl px-5 py-3 font-ui font-medium text-[0.85rem] cursor-pointer transition-colors whitespace-nowrap shadow-sm tracking-wide",
-                        copied && "bg-green-400 hover:bg-green-500"
+                        copied ? "bg-green-400 hover:bg-green-500" : ""
                     )}
                 >
                     {copied ? 'Copied' : 'Copy'}
