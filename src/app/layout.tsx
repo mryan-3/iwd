@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "International Women's Day Letters",
+  title: "International Women's Day",
   description: "Send a beautiful letter to someone special",
 };
 

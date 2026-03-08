@@ -60,14 +60,7 @@ export default function Page() {
 
               <ViewLetter data={letterData} />
 
-              {/* Make another one button */}
-              <motion.button
-                initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}
-                // onClick={handleMakeAnother}
-                className="mt-16 text-xs uppercase tracking-widest font-ui text-purple-400 hover:text-purple-600 transition-colors border-b border-transparent hover:border-purple-200 pb-1"
-              >
-                Make someone&apos;s day
-              </motion.button>
+
             </div>
           </motion.div>
         ) : (
