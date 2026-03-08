@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "International Women's Day",
-  description: "Send a beautiful letter to someone special",
+  description: "Happy International Women's Day",
 };
 
 export default function RootLayout({
