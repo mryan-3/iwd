@@ -22,6 +22,10 @@ export function LetterPaper({ data }: LetterPaperProps) {
                     <FlowerRow flowers={flowers} delay={0.4} />
                 </div>
 
+                <div className="text-center -mb-2">
+                    <span className="font-ui text-[0.65rem] uppercase tracking-[0.2em] text-purple-300 font-medium">8th March 2026</span>
+                </div>
+
                 <div className="space-y-5 md:space-y-6 text-center">
                     <div className="font-handwriting text-2xl md:text-3xl font-medium text-purple-600 italic px-2 md:px-4">Dear {data.to},</div>
                     <div className="font-handwriting text-xl md:text-[1.45rem] text-purple-600 leading-[1.7] md:leading-[1.8] whitespace-pre-wrap wrap-break-word max-w-xl mx-auto tracking-wide px-2 md:px-6">
@@ -37,7 +41,7 @@ export function LetterPaper({ data }: LetterPaperProps) {
 
             <div className="bg-purple-50 border-t border-purple-100 py-6 px-4 text-center">
                 <div className="text-[0.6rem] uppercase tracking-[0.2em] text-purple-400 font-ui font-medium">
-                    International Women&apos;s Day &middot; 8 March 2026
+                    International Women&apos;s Day &middot; 8th March 2026
                 </div>
             </div>
         </div>
